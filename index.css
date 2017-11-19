@@ -134,25 +134,20 @@ input[name='joke-toggle']
 
 .news
 {
-    float:left;
-}
-
-.source-switch
-{
-    display: inline-block;
-    margin-right: 10px;
+    float: left;
 }
 
 .source
 {
-    color: #9DE1E6;
-    margin: 10px 0;
+    color: #9de1e6;
+    display: inline-block;
+    margin-right: 10px;
     font-size: 1.3em;
 }
 
 .time
 {
-    padding-left: 10px; 
+    padding-left: 10px;
     font-size: .8em;
     color: #929292;
 }
@@ -160,7 +155,7 @@ input[name='joke-toggle']
 .global-news:checked ~ .news-source .global-header,
 .local-news:checked ~ .news-source .local-header
 {
-    color: #3954EE;
+    color: #3954ee;
 }
 
 .global-news,
@@ -191,7 +186,7 @@ input[name='joke-toggle']
 .currency
 {
     display: inline-block;
-    margin-right: 20px; 
+    margin-right: 20px;
 }
 
 .currency-name
@@ -199,14 +194,10 @@ input[name='joke-toggle']
     font-weight: bold;
 }
 
-.currency-change
-{
-    color: #A1A1A1;
-}
-
+.currency-change,
 .more
 {
-    color: #A1A1A1;
+    color: #a1a1a1;
 }
 
 .special
@@ -296,7 +287,7 @@ input[name='joke-toggle']
 
 .suggest-link
 {
-    color: #A1A1A1;
+    color: #a1a1a1;
 }
 
 .advertisment
@@ -338,7 +329,7 @@ input[name='joke-toggle']
 
 .thin-link
 {
-    padding-left: 5px; 
+    padding-left: 5px;
     font-size: .9em;
     color: #a3a3a3;
 }
@@ -358,7 +349,7 @@ input[name='joke-toggle']
 .joke-3:checked ~ label.joke-4::after,
 .joke-4:checked ~ label.joke-1::after
 {
-    color: #3954EE;
+    color: #3954ee;
     content: 'Следующая шутка';
 }
 
