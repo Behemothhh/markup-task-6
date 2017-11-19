@@ -6,21 +6,239 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="wrapper">
-        <div>One</div>
-        <div>Two</div>
-        <div>Three</div>
-        <div class="yandex_name">Yandex</div>
-        <div class="search">
-            <input type="text" class="input_line">
-            <button class="input_button">
-                <span class="button_text">Найти</span>
+    <main class="wrapper">
+        <input type="checkbox" name="modules-toggle" id="most-visited" class="most-visited">
+        <input type="checkbox" name="modules-toggle" id="jokes" class="jokes">
+        <input type="checkbox" name="modules-toggle" id="tv-programm" class="tv-programm">
+        <input type="checkbox" name="modules-toggle" id="car-news" class="car-news">
+        <input type="checkbox" name="modules-toggle" id="weather" class="weather">
+        <input type="checkbox" name="modules-toggle" id="jams" class="jams">
+        <input type="checkbox" name="modules-toggle" id="map" class="map">
+        <input type="checkbox" name="modules-toggle" id="affiche" class="affiche">
+        <nav class="control">
+            <section class="city">
+                <span class="link thin-link">Екатеринбург</span>
+            </section>
+            <section class="login">
+                <label for="login" class="login-element">Login:</label>
+                <input type="text" name="login" id="login" class="login-element"><br>
+                <label for="password" class="login-element">Password:</label>
+                <input type="password" name="login" id="password" class="login-element">
+            </section>
+            <section class="settings-placeholder">
+                <input type="checkbox" name="settings-toggle" id="settings-toggle" class="settings-toggle">
+                <label for="settings-toggle" class="settings-toggle link"></label>
+                <section class="settings">
+                    <label for="most-visited" class="most-visited link">Посещаемое</label><br>
+                    <label for="jokes" class="jokes link">Анекдоты</label><br>
+                    <label for="tv-programm" class="tv-programm link">ТВ программа</label><br>
+                    <label for="car-news" class="car-news link">Авто новости</label><br>
+                    <label for="weather" class="weather link">Погода</label><br>
+                    <label for="jams" class="jams link">Пробки</label><br>
+                    <label for="map" class="map link">Карта</label><br>
+                    <label for="affiche" class="affiche link">Афиша</label>
+                </section>
+            </section>
+        </nav>
+        <section class="intresting">
+            <section class="news">
+                <section class="news-links">
+                    <input type="radio" name="news-source" id="global-news" class="global-news" checked>
+                    <input type="radio" name="news-source" id="local-news" class="local-news">
+                    <header class="news-source">
+                        <label for="global-news" class="source-switch">
+                            <h2 class="source global-header link">Сейчас в СМИ</h2>
+                        </label>
+                        <label for="local-news" class="source-switch">
+                            <h2 class="source local-header link">в Екатеринбурге</h3>
+                        </label>
+                        <span class="time">13 ноября, понедельник 16:57</span>
+                    </header>
+                    <article class="global-news">
+                        <ul class="news-list">
+                            <li><a href="#" class="news-link link">Мугабе дали менее суток на добровольный уход в отставку</a></li>
+                            <li><a href="#" class="news-link link">Порошенко назвал Украину «космической державой»</a></li>
+                            <li><a href="#" class="news-link link">СМИ узнали о планах США выделить Украине $47 млн на оружие</a></li>
+                            <li><a href="#" class="news-link link">Саакашвили заявил о готовности стать премьер-министром Украины</a></li>
+                            <li><a href="#" class="news-link link">Столтенберг попытался во второй раз принести извинения Эрдогану</a></li>
+                        </ul>
+                    </article>
+                    <article class="local-news">
+                        <ul class="news-list">
+                            <li><a href="#" class="news-link link">Евгений Куйвашев назначил пять новых министров</a></li>
+                            <li><a href="#" class="news-link link">Структура «Т Плюс» оставила без тепла детскую больницу в Екатеринбурге</a></li>
+                            <li><a href="#" class="news-link link">Губернатор Свердловской области встретится с послом США в РФ</a></li>
+                            <li><a href="#" class="news-link link">На Эльмаше из-за пожара в пятиэтажке эвакуировали 150 человек</a></li>
+                            <li><a href="#" class="news-link link">Екатеринбурженка вошла в топ-10 красивых девушек планеты</a></li>
+                        </ul>
+                    </article>
+                </section>
+                <section class="money">
+                    <section class="currency">
+                        <span class="currency-name">USD ЦБ</span>
+                        <span class="currency-value">59,18</span>
+                        <span class="currency-change">-0,10</span>
+                    </section>
+                    <section class="currency">
+                        <span class="currency-name">EUR ЦБ</span>
+                        <span class="currency-value">68,92</span>
+                        <span class="currency-change">-0,06</span>
+                    </section>
+                    <section class="currency">
+                        <span class="currency-name">НЕФТЬ</span>
+                        <span class="currency-value">63,44</span>
+                        <span class="currency-change">-0,27%</span>
+                    </section>
+                    <a href="#" class="more link">...</a>
+                </section>
+            </section>
+            <figure class="special">
+                <img src="media/special.png" alt="yandex logo">
+                <figcaption>
+                    <header><h2 class="link">Браузер без опасности</h2></header>
+                    <p>Технология протект</p>
+                </figcaption>
+            </figure>
+        </section>
+        <aside class="yandex-name"><span class="name">Яндекс</span></aside>
+        <section class="search">
+            <input type="text" class="input-line">
+            <button class="input-button">
+                <span class="button-text">Найти</span>
+                <span class="arrow"></span>
             </button>
-        </div>
-        <div>Three</div>
-        <div>One</div>
-        <div>Two</div>
-        <div>Three</div>
-    </div>
+            <nav>
+                <a href="#" class="link-block link">Видео</a>
+                <a href="#" class="link-block link">Картинки</a>
+                <a href="#" class="link-block link">Новости</a>
+                <a href="#" class="link-block link">Карты</a>
+                <a href="#" class="link-block link">Маркет</a>
+                <a href="#" class="link-block link">Переводчик</a>
+                <a href="#" class="link-block link">Музыка</a>
+                <a href="#" class="link-block link">Еще</a>
+            </nav>
+            <span class="suggest">Найдется все. Например,
+                <a href="#" class="suggest-link link">выхожу один я на дорогу</a></span>
+        </section>
+        <section class="advertisment">
+            <img src="media/adv.gif" alt="advertisment" width="790px">
+        </section>
+        <section class="informer">
+            <section class="column-1">
+                <section class="most-visited module">
+                    <header><a href="#" class="link"><h3>Посещаемое</h3></a></header>
+                    <p><a href="#" class="bold-link link">Маркет</a> -
+                        <a href="#" class="regular-link link">китайская распродажа</a></p>
+                    <p><a href="#" class="bold-link link">Авто.ру</a> -
+                        <a href="#" class="regular-link link">Туссан третьей серии</a></p>
+                    <p><a href="#" class="bold-link link">Недвижимость</a> -
+                        <a href="#" class="regular-link link">продажа студии</a></p>        
+                    <p><a href="#" class="bold-link link">Работа</a> -
+                        <a href="#" class="regular-link link">охранником</a></p>
+                    <p><a href="#" class="bold-link link">Здоровье</a> -
+                        <a href="#" class="regular-link link">врач на связи</a></p>
+                    <p><a href="#" class="bold-link link">Коллекции</a> -
+                        <a href="#" class="regular-link link">Как малировать волосы</a></p>
+                    <p><a href="#" class="bold-link link">Авиабилеты</a> -
+                        <a href="#" class="regular-link link">из Екатеринбурга</a></p>
+                </section>
+                <section class="jokes module">
+                    <header><a href="#" class="link"><h3>Анекдоты</h3></a></header>
+                    <input type="radio" name="joke-toggle" id="joke-1" class="joke-toggle joke-1" checked>
+                    <article class="joke">
+                        <header><h4>Раздел: <a href="#" class="link">политика</a></h4></header>
+                        <p>Либералы говорят, что без помощи США и Британии мы бы проиграли Войну 1941-1945.<br>
+                            Я думаю, что без помощи США и Британии 2-я мировая война бы и вовсе не началась.</p>
+                    </article>
+                    <input type="radio" name="joke-toggle" id="joke-2" class="joke-toggle joke-2">
+                    <article  class="joke">
+                        <header><h4>Раздел: <a href="#" class="link">айтишное</a></h4></header>
+                        <p>- Билл Гейтс говорит, начинали они в гаражах с одним паяльником.<br>
+                            - Прям как мы. Но у нас ещё утюг был...</p>
+                    </article>
+                    <input type="radio" name="joke-toggle" id="joke-3" class="joke-toggle joke-3">
+                    <article  class="joke">
+                        <header><h4>Раздел: <a href="#" class="link">большой</a></h4></header>
+                        <p>Приехал в гости знакомый из Германии. В России, а тем более в Москве,
+                            не был никогда. Мы составили план осмотра достопримечательностей, прочитали ему.
+                            Говорит, всё хорошо, только я хотел бы ещё поехать на вокзал, куда приходит поезд
+                            Владивосток-Москва. Спрашиваю: «Зачем?». Говорит: «Я давно мечтаю посмотреть на людей,
+                            которые будут выходить из вагонов после дороги продолжительностью 7 дней».</p>
+                    </article>
+                    <input type="radio" name="joke-toggle" id="joke-4" class="joke-toggle joke-4">
+                    <article class="joke">
+                        <header><h4>Раздел: <a href="#" class="link">религия</a></h4></header>
+                        <p>- Надо принимать буддизм.<br>
+                            - Зачем?<br>
+                            - В христианстве я уже накосячил.</p>
+                    </article>
+                    <label for="joke-1" class="link joke-1"></label>
+                    <label for="joke-2" class="link joke-2"></label>
+                    <label for="joke-3" class="link joke-3"></label>
+                    <label for="joke-4" class="link joke-4"></label>
+                </section>
+            </section>
+            <section class="column-2">
+                <section class="tv-programm module">
+                    <header><a href="#" class="link"><h3>Телепрограмма</h3></a></header>
+                    <p>16:00 <a href="#" class="regular-link link">Понять. Простить</a>
+                        <a href="#" class="thin-link link">41 домашний</a></p>
+                    <p>16:30 <a href="#" class="regular-link link">Место встречи</a>
+                        <a href="#" class="thin-link link">НТВ</a></p>
+                    <p>16:30 <a href="#" class="regular-link link">Детективы</a>
+                        <a href="#" class="thin-link link">Пятый канал</a></p>
+                    <p>16:30 <a href="#" class="regular-link link">Новости</a>
+                        <a href="#" class="thin-link link">РЕН ТВ</a></p>
+                    <p>16:30 <a href="#" class="regular-link link">Гадалка</a>
+                        <a href="#" class="thin-link link">ТВ-3</a></p>
+                    <p>16:30 <a href="#" class="regular-link link">Реальные пацаны</a>
+                        <a href="#" class="thin-link link">ТНТ</a></p>
+                </section>
+                <section class="car-news module">
+                    <header><a href="#" class="link"><h3>Автомобильные новости</h3></a></header>
+                    <div class="shadow-top"></div>
+                    <section class="car-news-container">
+                        <p><a class="regualar-link link">"Лады" оснастят системой управления со сматрфонов</a><span class="time">11:30</span></p>
+                        <p><a class="regualar-link link">Названы цены и комплектации обновленного кроссовера Volvo XC60</a><span class="time">12:30</span></p>
+                        <p><a class="regualar-link link">Стали известны расценки на парковку в новом ростовском аэропорту</a><span class="time">12:39</span></p>
+                        <p><a class="regualar-link link">Гибридный седан Honda Clarity Plug-in Hybrid оценили в 33 400 долларов</a><span class="time">12:54</span></p>
+                        <p><a class="regualar-link link">Новое купе Mercedes-Benz CLS представят 1 декабря</a><span class="time">13:03</span></p>
+                        <p><a class="regualar-link link">Как завести машину, если сел аккумулятор</a><span class="time">13:38</span></p>
+                        <p><a class="regualar-link link">Лидером продаж купе и кабриолетов в России стала Mercedes-Benz</a><span class="time">14:10</span></p>
+                        <p><a class="regualar-link link">Продажи автомобилей KIA с пробегом в октябре выросли на 22%</a><span class="time">15:30</span></p>
+                    </section>
+                    <div class="shadow-bottom"></div>
+                </section>
+            </section>
+            <section class="column-3">
+                <section class="weather module">
+                    <header><a href="#" class="link"><h3>Погода</h3></a></header>
+                    <p>Вечер -5, ночь -7</p>
+                </section>
+                <section class="jams module">
+                    <header><a href="#" class="link"><h3>Пробки</h3></a></header>
+                    <p>Местами затруднения</p>
+                </section>
+                <section class="map module">
+                    <header><a href="#" class="link"><h3>Карта Екатеринбурга</h3></a></header>
+                    <a href="#" class="bold-link link map-element">Такси</a>
+                    <a href="#" class="bold-link link map-element">Расписания</a>
+                    <a href="#" class="bold-link link map-element">Междугородние автобусы</a>
+                </section>
+                <section class="affiche module">
+                    <header><a href="#" class="link"><h3>Афиша</h3></a></header>
+                    <p><a href="#" class="regular-link link">Субурбикон</a>
+                        <a href="#" class="thin-link link">премьера в четверг</a></p>
+                    <p><a href="#" class="regular-link link">Последний богатырь</a>
+                        <a href="#" class="thin-link link">приключение</a></p>
+                    <p><a href="#" class="regular-link link">Фиксики: Большой секрет</a>
+                        <a href="#" class="thin-link link">мультфильм</a></p>
+                    <p><a href="#" class="regular-link link">Тор: Рагнарёк</a>
+                        <a href="#" class="thin-link link">фэнтези</a></p>
+                    <p><a href="#" class="bold-link link">Концерты - Brainstorm</a></p>
+                </section>
+            </section>
+        </section>
+    </main>
 </body>
 </html>

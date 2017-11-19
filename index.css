@@ -1,69 +1,384 @@
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .8em;
+    margin: 0;
+}
+
 .wrapper
 {
     display: grid;
-    grid-template-columns: minmax(100px, 1fr) 600px minmax(100px, 1fr);
-    grid-template-rows: 300px 100px 550px;
+    grid-template-columns: minmax(150px, 1fr) 800px 150px 1fr;
+    grid-template-rows: 50px 230px 100px 15px 100px 10px 450px;
 }
 
-div
+.control
 {
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+}
+
+.city
+{
+    float: left;
+    padding: 10px;
+    font-size: 1.5em;
+}
+
+.login,
+.settings-placeholder
+{
+    float: right;
+}
+
+.login
+{
+    margin-left: 20px;
+    box-shadow: 4px -4px 4px 4px #000;
+    padding: 5px;
+    text-align: end;
+    height: 100%;
     border: 1px solid #000;
+}
+
+.settings-placeholder
+{
+    position: relative;
+    
+}
+
+.settings
+{
+    width: 120px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    padding: 20px;
+    border: 1px solid #000;
+    background: #fff;
+}
+
+label.settings-toggle::after
+{
+    position: relative;
+    content: 'Настройки';
+}
+
+input.settings-toggle:checked ~ .settings
+{
+    display: block;
+}
+
+input.settings-toggle:checked + label.settings-toggle::after
+{
+    right: 5px;
+    z-index: 3;
+    font-size: 2em;
+    content: 'x';
+}
+
+input.most-visited:checked ~ .control label.most-visited::before,
+input.jokes:checked ~ .control label.jokes::before,
+input.tv-programm:checked ~ .control label.tv-programm::before,
+input.car-news:checked ~ .control label.car-news::before,
+input.weather:checked ~ .control label.weather::before,
+input.jams:checked ~ .control label.jams::before,
+input.map:checked ~ .control label.map::before,
+input.affiche:checked ~ .control label.affiche::before
+{
+    content: 'x';
+    padding-right: 10px;
+}
+
+input.most-visited:checked ~ .informer .most-visited,
+input.jokes:checked ~ .informer .jokes,
+input.tv-programm:checked ~ .informer .tv-programm,
+input.car-news:checked ~ .informer .car-news,
+input.weather:checked ~ .informer .weather,
+input.jams:checked ~ .informer .jams,
+input.map:checked ~ .informer .map,
+input.affiche:checked ~ .informer .affiche,
+input.most-visited:checked ~ input.jokes:checked ~ .informer .column-1,
+input.tv-programm:checked ~ input.car-news:checked ~ .informer .column-2
+{
+    display: none;
+}
+
+.link:hover,
+.global-news:checked ~ .news-source .global-header:hover,
+.local-news:checked ~ .news-source .local-header:hover
+{
+    color: #f00;
+}
+
+.link
+{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.intresting
+{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+input[name='news-source'],
+input[name='settings-toggle'],
+input[name='modules-toggle'],
+input[name='joke-toggle']
+{
+    display: none;
+}
+
+.news
+{
+    float:left;
+}
+
+.source-switch
+{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.source
+{
+    color: #9DE1E6;
+    margin: 10px 0;
+    font-size: 1.3em;
+}
+
+.time
+{
+    padding-left: 10px; 
+    font-size: .8em;
+    color: #929292;
+}
+
+.global-news:checked ~ .news-source .global-header,
+.local-news:checked ~ .news-source .local-header
+{
+    color: #3954EE;
+}
+
+.global-news,
+.local-news
+{
+    display: none;
+}
+
+.news-list
+{
+    list-style-position: outside;
+    padding: 0;
+}
+
+.news-link
+{
+    color: #000;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.global-news:checked ~ .global-news,
+.local-news:checked ~ .local-news
+{
+    display: initial;
+}
+
+.currency
+{
+    display: inline-block;
+    margin-right: 20px; 
+}
+
+.currency-name
+{
+    font-weight: bold;
+}
+
+.currency-change
+{
+    color: #A1A1A1;
+}
+
+.more
+{
+    color: #A1A1A1;
+}
+
+.special
+{
+    float: right;
+    width: 150px;
 }
 
 .search
 {
     grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
     display: flex;
-    padding: 30px 0;
+    flex-wrap: wrap-reverse;
+    align-content: space-between;
 }
 
-.yandex_name
+.yandex-name
 {
     display: flex;
     align-items: center;
-    grid-column: 2 3;
-    grid-row: 1 2;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
     direction: rtl;
     font-size: 3em;
     padding-right: 10px;
 }
 
-.input_line
+.name::first-letter
 {
-    flex-basis: 80%;
-    border: 2px solid #ff0;
+    color: #f00;
 }
 
-.input_button
+.input-line
 {
-    flex-basis: 20%;
+    box-sizing: border-box;
+    flex-basis: 84%;
+    border: 2px solid #ff0;
     padding: 0;
-    justify-content: stretch;
+}
+
+.input-button
+{
+    flex-basis: 15%;
+    padding: 0;
     cursor: pointer;
-    align-items: stretch;
     display: flex;
-    flex-wrap: nowrap;
     border: none;
     background-color: #fff;
 }
 
-.button_text
+.button-text
 {
+    display: inline-block;
+    font-size: 2em;
     background-color: #ff0;
+    border: 4px solid #ff0;
+    border-bottom-width: 3px;
 }
 
-.button_text::after
+.arrow
 {
-    position: absolute;
     font-size: 0;
     content: '';
     height: 0;
     width: 0;
-    border-width: 15px;
+    border-width: 19px;
     border-style: solid;
     border-color: rgba(0,0,0,0);
     border-left-color: #ff0;
+}
+
+.link-block
+{
+    font-size: 1.5em;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.suggest
+{
+    font-size: 1.2em;
+    order: -1;
+}
+
+.suggest-link
+{
+    color: #A1A1A1;
+}
+
+.advertisment
+{
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+}
+
+.informer
+{
+    grid-column: 2 / 4;
+    grid-row: 7 / 8;
+    display: flex;
+}
+
+.column-1,
+.column-2,
+.column-3
+{
+    padding: 0 10px;
+    flex-basis: 33%;
+}
+
+.module
+{
+    margin-top: 20px;
+}
+
+.bold-link,
+.regular-link
+{
+    color: #000;
+}
+
+.bold-link
+{
+    font-weight: bold;
+}
+
+.thin-link
+{
+    padding-left: 5px; 
+    font-size: .9em;
+    color: #a3a3a3;
+}
+
+.joke
+{
+    display: none;
+}
+
+.joke-toggle:checked + .joke
+{
+    display: block;
+}
+
+.joke-1:checked ~ label.joke-2::after,
+.joke-2:checked ~ label.joke-3::after,
+.joke-3:checked ~ label.joke-4::after,
+.joke-4:checked ~ label.joke-1::after
+{
+    color: #3954EE;
+    content: 'Следующая шутка';
+}
+
+.car-news-container
+{
+    height: 200px;
+    overflow-y: scroll;
+}
+
+.shadow-top,
+.shadow-bottom
+{
+    width: 100%;
+    position: relative;
+    box-shadow: 0 0 10px 10px #fff;
+    z-index: 2;
+}
+
+.map-element
+{
+    display: inline-block;
+    margin: 5px 10px 0 0;
 }
