@@ -105,38 +105,42 @@
             <figure class="special">
                 <img src="media/special.png" alt="yandex logo">
                 <figcaption>
-                    <header><h2 class="link">Браузер без опасности</h2></header>
+                    <header><h2 class="link blue-link">Браузер без опасности</h2></header>
                     <p>Технология протект</p>
                 </figcaption>
             </figure>
         </section>
-        <aside class="yandex-name"><span class="name">Яндекс</span></aside>
+        <aside class="yandex-name"><span class="name"></span></aside>
         <section class="search">
-            <input type="text" class="input-line">
+            <div class="input-line">
+                <input type="text" class="text-input">
+                <span class="keyboard-input link"></span>
+                <span class="voice-input link"></span>
+            </div>
             <button class="input-button">
                 <span class="button-text">Найти</span>
                 <span class="arrow"></span>
             </button>
             <nav>
-                <a href="#" class="link-block link">Видео</a>
-                <a href="#" class="link-block link">Картинки</a>
-                <a href="#" class="link-block link">Новости</a>
-                <a href="#" class="link-block link">Карты</a>
-                <a href="#" class="link-block link">Маркет</a>
-                <a href="#" class="link-block link">Переводчик</a>
-                <a href="#" class="link-block link">Музыка</a>
-                <a href="#" class="link-block link">Еще</a>
+                <a href="#" class="link-block blue-link link">Видео</a>
+                <a href="#" class="link-block blue-link link">Картинки</a>
+                <a href="#" class="link-block blue-link link">Новости</a>
+                <a href="#" class="link-block blue-link link">Карты</a>
+                <a href="#" class="link-block blue-link link">Маркет</a>
+                <a href="#" class="link-block blue-link link">Переводчик</a>
+                <a href="#" class="link-block blue-link link">Музыка</a>
+                <a href="#" class="link-block blue-link link">Еще</a>
             </nav>
             <span class="suggest">Найдется все. Например,
                 <a href="#" class="suggest-link link">выхожу один я на дорогу</a></span>
         </section>
         <section class="advertisment">
-            <img src="media/adv.gif" alt="advertisment" width="790">
+            <img src="media/adv.gif" alt="advertisment" class="adv-img link">
         </section>
         <section class="informer">
             <section class="column-1">
                 <section class="most-visited module">
-                    <header><h3><a href="#" class="link">Посещаемое</a></h3></header>
+                    <header><h3><a href="#" class="link blue-link">Посещаемое</a></h3></header>
                     <p><a href="#" class="bold-link link">Маркет</a> -
                         <a href="#" class="regular-link link">китайская распродажа</a></p>
                     <p><a href="#" class="bold-link link">Авто.ру</a> -
@@ -153,10 +157,10 @@
                         <a href="#" class="regular-link link">из Екатеринбурга</a></p>
                 </section>
                 <section class="jokes module">
-                    <header><h3><a href="#" class="link">Анекдоты</a></h3></header>
+                    <header><h3><a href="#" class="link blue-link">Анекдоты</a></h3></header>
                     <input type="radio" name="joke-toggle" id="joke-1" class="joke-toggle joke-1" checked>
                     <article class="joke">
-                        <header><h4>Раздел: <a href="#" class="link">политика</a></h4></header>
+                        <header><h4>Раздел: <a href="#" class="link blue-link">политика</a></h4></header>
                         <p>Либералы говорят, что без помощи США и Британии мы бы проиграли Войну
                             1941-1945.<br>
                             Я думаю, что без помощи США и Британии 2-я мировая война бы и вовсе
@@ -164,13 +168,13 @@
                     </article>
                     <input type="radio" name="joke-toggle" id="joke-2" class="joke-toggle joke-2">
                     <article  class="joke">
-                        <header><h4>Раздел: <a href="#" class="link">айтишное</a></h4></header>
+                        <header><h4>Раздел: <a href="#" class="link blue-link">айтишное</a></h4></header>
                         <p>- Билл Гейтс говорит, начинали они в гаражах с одним паяльником.<br>
                             - Прям как мы. Но у нас ещё утюг был...</p>
                     </article>
                     <input type="radio" name="joke-toggle" id="joke-3" class="joke-toggle joke-3">
                     <article  class="joke">
-                        <header><h4>Раздел: <a href="#" class="link">большой</a></h4></header>
+                        <header><h4>Раздел: <a href="#" class="link blue-link">большой</a></h4></header>
                         <p>Приехал в гости знакомый из Германии. В России, а тем более в Москве,
                             не был никогда. Мы составили план осмотра достопримечательностей, прочитали ему.
                             Говорит, всё хорошо, только я хотел бы ещё поехать на вокзал, куда приходит поезд
@@ -180,20 +184,20 @@
                     </article>
                     <input type="radio" name="joke-toggle" id="joke-4" class="joke-toggle joke-4">
                     <article class="joke">
-                        <header><h4>Раздел: <a href="#" class="link">религия</a></h4></header>
+                        <header><h4>Раздел: <a href="#" class="link blue-link">религия</a></h4></header>
                         <p>- Надо принимать буддизм.<br>
                             - Зачем?<br>
                             - В христианстве я уже накосячил.</p>
                     </article>
-                    <label for="joke-1" class="link joke-1"></label>
-                    <label for="joke-2" class="link joke-2"></label>
-                    <label for="joke-3" class="link joke-3"></label>
-                    <label for="joke-4" class="link joke-4"></label>
+                    <label for="joke-1" class="joke-1"></label>
+                    <label for="joke-2" class="joke-2"></label>
+                    <label for="joke-3" class="joke-3"></label>
+                    <label for="joke-4" class="joke-4"></label>
                 </section>
             </section>
             <section class="column-2">
                 <section class="tv-programm module">
-                    <header><h3><a href="#" class="link">Телепрограмма</a></h3></header>
+                    <header><h3><a href="#" class="link blue-link">Телепрограмма</a></h3></header>
                     <p>16:00 <a href="#" class="regular-link link">Понять. Простить</a>
                         <a href="#" class="thin-link link">41 домашний</a></p>
                     <p>16:30 <a href="#" class="regular-link link">Место встречи</a>
@@ -208,7 +212,7 @@
                         <a href="#" class="thin-link link">ТНТ</a></p>
                 </section>
                 <section class="car-news module">
-                    <header><h3><a href="#" class="link">Автомобильные новости</a></h3></header>
+                    <header><h3><a href="#" class="link blue-link">Автомобильные новости</a></h3></header>
                     <div class="shadow-top"></div>
                     <section class="car-news-container">
                         <p><a class="regualar-link link">"Лады" оснастят системой управления со
@@ -233,21 +237,31 @@
             </section>
             <section class="column-3">
                 <section class="weather module">
-                    <header><h3><a href="#" class="link">Погода</a></h3></header>
+                    <header>
+                        <h3>
+                            <a href="#" class="link blue-link">Погода</a>
+                            <a href="#" class="link regular-link"><span class="weather-icon"></span>-2</a>
+                        </h3>
+                    </header>
                     <p>Вечер -5, ночь -7</p>
                 </section>
                 <section class="jams module">
-                    <header><h3><a href="#" class="link">Пробки</a></h3></header>
+                    <header>
+                        <h3>
+                            <a href="#" class="link blue-link">Пробки</a>
+                            <a href="#" class="link"><span class="jam-icon"></span></a>
+                        </h3>
+                    </header>
                     <p>Местами затруднения</p>
                 </section>
                 <section class="map module">
-                    <header><h3><a href="#" class="link">Карта Екатеринбурга</a></h3></header>
+                    <header><h3><a href="#" class="link blue-link">Карта Екатеринбурга</a></h3></header>
                     <a href="#" class="bold-link link map-element">Такси</a>
                     <a href="#" class="bold-link link map-element">Расписания</a>
                     <a href="#" class="bold-link link map-element">Междугородние автобусы</a>
                 </section>
                 <section class="affiche module">
-                    <header><h3><a href="#" class="link">Афиша</a></h3></header>
+                    <header><h3><a href="#" class="link blue-link">Афиша</a></h3></header>
                     <p><a href="#" class="regular-link link">Субурбикон</a>
                         <a href="#" class="thin-link link">премьера в четверг</a></p>
                     <p><a href="#" class="regular-link link">Последний богатырь</a>

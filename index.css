@@ -139,7 +139,7 @@ input[name='joke-toggle']
 
 .source
 {
-    color: #9de1e6;
+    color: #6da9e4;
     display: inline-block;
     margin-right: 10px;
     font-size: 1.3em;
@@ -155,7 +155,7 @@ input[name='joke-toggle']
 .global-news:checked ~ .news-source .global-header,
 .local-news:checked ~ .news-source .local-header
 {
-    color: #3954ee;
+    color: #0054b9;
 }
 
 .global-news,
@@ -208,37 +208,72 @@ input[name='joke-toggle']
 
 .search
 {
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
     display: flex;
     flex-wrap: wrap-reverse;
     align-content: space-between;
 }
 
+.text-input
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    border: none;
+}
+
+.keyboard-input,
+.voice-input
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-size: 32px;
+    background-position-y: center;
+    padding-right: 5px;
+}
+
+.keyboard-input
+{
+    background-image: url('media/keyboard.svg');
+}
+
+.voice-input
+{
+    background-image: url('media/micro.svg');
+    right: 32px;
+}
+
 .yandex-name
 {
     display: flex;
+    direction: rtl;
     align-items: center;
     grid-column: 1 / 2;
     grid-row: 3 / 4;
-    direction: rtl;
-    font-size: 3em;
     padding-right: 10px;
 }
 
-.name::first-letter
+.name
 {
-    color: #f00;
+    background-image: url('media/logo.svg');
+    background-repeat: no-repeat;
+    background-position-y: center;
+    width: 150px;
+    height: 80px;
 }
 
 .input-line
 {
     box-sizing: border-box;
     flex-basis: 84%;
-    border: 2px solid #ff0;
-    padding: 0;
+    border: 2px solid #fedc4d;
+    position: relative;
 }
 
 .input-button
@@ -255,8 +290,8 @@ input[name='joke-toggle']
 {
     display: inline-block;
     font-size: 2em;
-    background-color: #ff0;
-    border: 4px solid #ff0;
+    background-color: #fedc4d;
+    border: 4px solid #fedc4d;
     border-bottom-width: 3px;
 }
 
@@ -269,14 +304,18 @@ input[name='joke-toggle']
     border-width: 19px;
     border-style: solid;
     border-color: rgba(0,0,0,0);
-    border-left-color: #ff0;
+    border-left-color: #fedc4d;
 }
 
 .link-block
 {
     font-size: 1.5em;
-    display: inline-block;
     margin-right: 10px;
+}
+
+.blue-link
+{
+    color: #0054b9;
 }
 
 .suggest
@@ -294,6 +333,11 @@ input[name='joke-toggle']
 {
     grid-column: 2 / 3;
     grid-row: 5 / 6;
+}
+
+.adv-img
+{
+    width: 100%;
 }
 
 .informer
@@ -349,7 +393,8 @@ input[name='joke-toggle']
 .joke-3:checked ~ label.joke-4::after,
 .joke-4:checked ~ label.joke-1::after
 {
-    color: #3954ee;
+    color: #0054b9;
+    cursor: pointer;
     content: 'Следующая шутка';
 }
 
@@ -372,4 +417,23 @@ input[name='joke-toggle']
 {
     display: inline-block;
     margin: 5px 10px 0 0;
+}
+
+.jam-icon,
+.weather-icon
+{
+    width: 32px;
+    display: inline-block;
+    height: 32px;
+    vertical-align: middle;
+}
+
+.weather-icon
+{
+    background-image: url('media/weather-icon.svg');
+}
+
+.jam-icon
+{
+    background-image: url('media/jam-status.svg');
 }
